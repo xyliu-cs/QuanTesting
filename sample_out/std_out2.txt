@@ -1,0 +1,86 @@
+Initializing the script...
+Loading facebook/mbart-large-50-many-to-many-mmt NMT model as default.
+Loading facebook/mbart-large-50-many-to-many-mmt Tokenizer (en-zh) as default.
+Perform Pytorch dynamic quantization to int.8 as default.
+Loading text from text.txt file as default.
+Loading word alignment model from simalign as default.
+Accessing the completion model using ChatGPT as default.
+Running the main functionality...
+Caught exception: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), retrying... (1/10)
+Caught exception: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), retrying... (2/10)
+
+Potential translation error with similarity [base, quant] =  [0.6175422072410583, 0.9156999588012695]
+Source:  I think a lot of us were in denial, said another former employee who continued working at the company after the Wall Street Journal story.
+Baseline translation:  另一位公司前雇员在《华尔街日报》报道后继续在公司工作。
+Quantized translation:  在《华尔街日报》报道后,另一位前员工继续在这家公司工作的人说,我们当中许多人是否认的。
+
+Original:  I think a lot of us were in denial, said another former employee who continued working at the company after the Wall Street Journal story.
+Masked:  I think a lot of us were in den ial , said another former employee who continued <fill> at the company after the Wall Street Journal <fill> .
+Mutated:  I think a lot of us were in denial, said another former employee who continued working at the company after the Wall Street Journal article exposed the scandal.
+Appending mutated sentence to the sentence pool.
+
+Potential translation error with similarity [base, quant] =  [0.8755286931991577, 0.8247054815292358]
+Source:  According to a 2018 Harvard Business School study, venture capital firms that increased the number of female partners they hired by even 10% saw a bump in overall fund returns.
+Baseline translation:  根据哈佛商学院(Harvard Business School)的一份2018年研究,那些增加雇佣女性合作伙伴的创业投资公司( venture capital firms)的总回报率甚至增加了10%。
+Quantized translation:  哈佛商学院(Harvard Business School)2018年的一项研究显示,在增加雇佣的女性合伙人人数甚至为10%的风险资本企业,总资金回报大幅上升。
+
+Original:  According to a 2018 Harvard Business School study, venture capital firms that increased the number of female partners they hired by even 10% saw a bump in overall fund returns.
+Masked:  According to a <fill> Harvard Business School study , venture capital firm s that increased the number of female partners they hi red by even 10% <fill> a bu mp in overall fund return s .
+Mutated:  According to a recent Harvard Business School study, venture capital firms that increased the number of female partners they hired by even 10% experienced a bump in overall fund returns.
+Appending mutated sentence to the sentence pool.
+
+Potential translation error with similarity [base, quant] =  [0.643541157245636, 0.7803547978401184]
+Source:  Anxious gossip about who is and is not mentioned in the latest news reports.
+Baseline translation:  在最近的新闻报道中,人们担心谁是,谁不在。
+Quantized translation:  关于谁在最近的新闻报道中不被提及和不被提及的焦虑的闲言.
+
+Original:  Anxious gossip about who is and is not mentioned in the latest news reports.
+Masked:  An <fill> us <fill> about who is and is not mentioned in the <fill> <fill> <fill> .
+Mutated:  An important reminder prompts us to reflect about who is and is not mentioned in the ongoing public discourse.
+Appending mutated sentence to the sentence pool.
+
+Potential translation error with similarity [base, quant] =  [0.9270485043525696, 0.9042078256607056]
+Source:  Because if you're writing an economics paper, you're studying things like the impact of the minimum wage, often without the luxury of running experiments.
+Baseline translation:  因为如果你写一篇经济学论文,你会研究诸如最低工资的影响,通常没有进行实验的奢侈。
+Quantized translation:  因为如果你写一篇经济学论文,你研究了诸如最低工资的影响,通常没有进行实验的奢侈品。
+
+Original:  Because if you're writing an economics paper, you're studying things like the impact of the minimum wage, often without the luxury of running experiments.
+Masked:  Because if you ' re writing an economic s paper , you ' re study ing <fill> like the impact of the minimum wa ge , often without the lux ury of running experiment s .
+Mutated:  Because if you're writing an economic paper, you're studying phenomena like the impact of the minimum wage, often without the luxury of running experiments.
+Appending mutated sentence to the sentence pool.
+Caught exception: 503 Server Error: Service Unavailable for url: https://api-inference.huggingface.co/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2, retrying... (1/10)
+Caught exception: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), retrying... (2/10)
+Caught exception: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), retrying... (3/10)
+Caught exception: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), retrying... (4/10)
+Caught exception: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), retrying... (1/10)
+
+Potential translation error with similarity [base, quant] =  [0.8294846415519714, 0.9102997183799744]
+Source:  According to a recent Harvard Business School study, venture capital firms that increased the number of female partners they hired by even 10% experienced a bump in overall fund returns.
+Baseline translation:  根据哈佛商学院最近的一项研究,那些增加雇佣女性合伙人人数甚至为10%的风险资本公司,总体基金回报率大幅上升。
+Quantized translation:  根据哈佛商学院最近的一项研究,风险投资公司( venture capital firms)增加雇佣的女性合伙人人数甚至为10 %, 因此总资金回报大幅下滑。
+
+Original:  According to a recent Harvard Business School study, venture capital firms that increased the number of female partners they hired by even 10% experienced a bump in overall fund returns.
+Masked:  According to a recent Harvard Business School study , venture capital firm s that <fill> the number of female partners they hi red by <fill> 10% experienced a bu mp in overall fund return s .
+Mutated:  According to a recent Harvard Business School study, venture capital firms that increased the number of female partners they hired by at least 10% experienced a bump in overall fund returns.
+Appending mutated sentence to the sentence pool.
+
+Potential translation error with similarity [base, quant] =  [0.8111392259597778, 0.8431103229522705]
+Source:  An important reminder prompts us to reflect about who is and is not mentioned in the ongoing public discourse.
+Baseline translation:  一个重要的提醒让我们思考 ongoing public discourse中谁是,谁不在。
+Quantized translation:  一个重要的提醒让我们思考在当前的公共讨论中,谁是和没有提到的人。
+
+Original:  An important reminder prompts us to reflect about who is and is not mentioned in the ongoing public discourse.
+Masked:  An important remind er prompt s us to reflect about who is and is not <fill> in the ongoing public discours e .
+Mutated:  An important reminder prompts us to reflect about who is and is not included in the ongoing public discourse.
+Appending mutated sentence to the sentence pool.
+Caught exception: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')), retrying... (1/10)
+
+Potential translation error with similarity [base, quant] =  [0.8539539575576782, 0.8200393915176392]
+Source:  According to a recent Harvard Business School study, venture capital firms that increased the number of female partners they hired by at least 10% experienced a bump in overall fund returns.
+Baseline translation:  根据哈佛商学院最近的一项研究,那些增加雇佣的女性合作伙伴人数至少10%的创业资本公司,总体基金回报率大幅上升。
+Quantized translation:  根据哈佛商学院最近的一项研究,那些增加雇佣的女性合伙人人数至少10%的风险投资公司,总资金回报大幅上升。
+
+Original:  According to a recent Harvard Business School study, venture capital firms that increased the number of female partners they hired by at least 10% experienced a bump in overall fund returns.
+Masked:  According to a recent Harvard Business School study , venture capital firm s that <fill> the number of female partners they hi red by at least 10% experienced a bu mp in <fill> fund return s .
+Mutated:  According to a recent Harvard Business School study, venture capital firms that increased the number of female partners they hired by at least 10% experienced a bump in their overall fund returns.
+Appending mutated sentence to the sentence pool.
