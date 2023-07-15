@@ -15,7 +15,7 @@ In this work, the aim is to automate the generation of inputs that provoke trans
 | Source    | According to a 2018 Harvard Business School study, venture capital firms that increased the number of female partners they hired by even 10% saw a bump in overall fund returns.|
 | Baseline  | 根据哈佛商学院(Harvard Business School)的一份2018年研究,那些增加雇佣女性合作伙伴的创业投资公司( venture capital firms)的总回报率甚至增加了10%。|  
 | Quantized | 哈佛商学院(Harvard Business School)2018年的一项研究显示,在增加雇佣的女性合伙人人数甚至为10%的风险资本企业,总资金回报大幅上升。 |  
-| Masked    | According to a <fill> Harvard Business School study , venture capital firm s that increased the number of female partners they hi red by even 10% <fill> a bu mp in overall fund return s .|  
+| Masked    | According to a \<fill\> Harvard Business School study , venture capital firm s that increased the number of female partners they hi red by even 10% \<fill\> a bu mp in overall fund return s .|  
 | Mutated   | According to a recent Harvard Business School study, venture capital firms that increased the number of female partners they hired by even 10% experienced a bump in overall fund returns.|  
 
 
