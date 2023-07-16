@@ -7,7 +7,11 @@
 * **Theory 2**: From the same paper, we know that the inputs near the decision boundary are more likely to capture the different behaviors of a DNN and its quantized version, falling into the so-called **disagreement region**.
 * **Lemma 1**: From 1 and 2, we can infer that if an anomalous input within the disagreement region undergoes only slight mutation, it is plausible that the mutated input will remain within the confines of the disagreement region.
 
-This work aims to automate the generation of inputs that provoke translation discrepancies or errors within the quantized Neural Machine Translation (NMT) model, thereby facilitating the evaluation of quantization robustness. **QuanTesting** treats sentences that induce detectable sentence-embedding differences for an NMT model and its quantized version as the anomalous inputs. For those inputs, it aligns and pinpoints the tokens responsible for the translation discrepancies and assigns higher masking probabilities to innocuous tokens and lower probabilities to critical tokens based on their ranked responsibilities. It then randomly masks some tokens according to this weighted distribution to create masked sentences. The masked sentence is subsequently fed into the completion model with a standard prompt to create a mutant. The mutant sentences are again appended to the sentence pool, waiting to be translated by the models. This cycle of translation, embedding comparison, alignment, masking, and mutation can be iterated to expand the set of detected anomalies.
+This work aims to automate the generation of inputs that provoke translation discrepancies or errors within the quantized Neural Machine Translation (NMT) model, thereby facilitating the evaluation of quantization robustness.  
+  
+**_QuanTesting_** treats sentences that induce detectable sentence-embedding differences for an NMT model and its quantized version as the anomalous inputs. For those inputs, it aligns and pinpoints the tokens responsible for the translation discrepancies and assigns higher masking probabilities to innocuous tokens and lower probabilities to critical tokens based on their ranked responsibilities. It then randomly masks some tokens according to this weighted distribution to create masked sentences. The masked sentence is subsequently fed into the completion model with a standard prompt to create a mutant. The mutant sentences are again appended to the sentence pool, waiting to be translated by the models.
+  
+This cycle of **translation**, **embedding comparison**, **alignment**, **masking**, and **mutation** can be iterated to expand the set of detected anomalies.
 
 ## Sample workflow
 | Iter 1 | Translation | 
@@ -40,7 +44,7 @@ revChatGPT 3.6.1 (access token)
 PyTorch 1.9+
 Transformers 4.0.0+
 simalign
-Hugging Face Inference API authentication code 
+Hugging Face API authorization token 
 ```
 
 
@@ -49,6 +53,7 @@ To run the script:
 cd src
 # replace text.txt with your own file
 # replace the access tokens in quant_testing.py with your own tokens
+# set the model configurations and quantization method
 python quant_testing.py
 ```
 Alternatively, to experiment interactively:
