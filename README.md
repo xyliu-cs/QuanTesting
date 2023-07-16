@@ -42,3 +42,16 @@ Transformers 4.0.0+
 simalign
 Hugging Face Inference API authentication code 
 ```
+
+
+To run the script:
+```bash
+cd src
+# replace text.txt with your own file
+# replace the access tokens in quant_testing.py with your own tokens
+python quant_testing.py
+```
+Alternatively, to experiment interactively:
+```bash
+jupyter notebook quant_testing_interactive.ipynb
+```
