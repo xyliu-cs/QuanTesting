@@ -9,7 +9,7 @@
 
 This work aims to automate the generation of inputs that provoke translation discrepancies or errors within the quantized Neural Machine Translation (NMT) model, thereby facilitating the evaluation of quantization robustness.  
   
-**_QuanTesting_** treats sentences that induce detectable sentence-embedding differences for an NMT model and its quantized version as the anomalous inputs. For those inputs, it aligns and pinpoints the tokens responsible for the translation discrepancies and assigns higher masking probabilities to innocuous tokens and lower probabilities to critical tokens based on their ranked responsibilities. It then randomly masks some tokens according to this weighted distribution to create masked sentences. The masked sentence is subsequently fed into the completion model with a standard prompt to create a mutant. The mutant sentences are again appended to the sentence pool, waiting to be translated by the models.
+**_QuanTesting_** treats sentences with detectable embedding differences for an NMT model and its quantized version as potential anomalous inputs. For those inputs, it aligns and pinpoints the tokens responsible for the translation discrepancies and assigns weights to these tokens in inverse proportion to their measured responsibilities. It then randomly masks some tokens using the calculated weighted distribution to create a masked sentence. The masked sentence is subsequently input to the completion model with a standard prompt asking the model to substitute the masking symbols. Finally, the mutated sentence is added to the sentence pool, waiting to be translated by the models in the future.
   
 This cycle of **translation**, **embedding comparison**, **alignment**, **masking**, and **mutation** can be iterated to expand the set of detected anomalies.
 
@@ -53,7 +53,7 @@ To run the script:
 cd src
 # replace text.txt with your own file
 # replace the access tokens in quant_testing.py with your own tokens
-# set the model configurations and quantization method
+# choose the target model and quantization method
 python quant_testing.py
 ```
 Alternatively, to experiment interactively:
